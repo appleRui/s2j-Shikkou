@@ -1,5 +1,7 @@
 <template>
-  <div class="page-top" />
+  <div id="page-top">
+    <MainVisual />
+  </div>
 </template>
 
 <script>

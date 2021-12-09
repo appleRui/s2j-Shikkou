@@ -1,0 +1,25 @@
+.mv {
+  background-image: url("~/assets/images/mv.png");
+  background-position: center;
+  background-size: cover;
+  &-wrapper {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    color: #FFFFFF;
+
+    &__welcome-txt {
+      font-size: 2.25rem;
+      line-height: 2.25rem;
+      margin-bottom: 2rem;
+    }
+    &__welcome-sub-txt {
+      font-size: 4.5rem;
+      font-weight: 700;
+      line-height: 4.5rem;
+      margin-bottom: 4rem;
+    }
+
+    &__contact-btn {
+    }
+  }
+}
