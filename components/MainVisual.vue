@@ -1,11 +1,12 @@
 <template>
   <div class="mv">
-    <div class="mv-wrapper">
-        <h2 class="mv-wraper__welcome-txt"></h2>
-        <b-button class="mv-wrapper__contact-btn">
+    <b-container class="mv-wrapper text-center">
+        <h2 class="mv-wrapper__welcome-txt">ようこそ</h2>
+        <h2 class="mv-wrapper__welcome-sub-txt">二部執行委員会へ</h2>
+        <b-button class="mv-wrapper__contact-btn" size="lg" variant="primary">
           お問い合わせフォーム
         </b-button>
-    </div>
+    </b-container>
   </div>
 </template>
 

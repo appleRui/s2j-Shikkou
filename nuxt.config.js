@@ -9,7 +9,7 @@ export default {
   head: {
     title: '東京電機大学 二部執行委員会',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [{
         charset: 'utf-8'
@@ -38,6 +38,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/scss/common',
+    '~/assets/scss/top',
     '~/assets/scss/variables',
   ],
 
