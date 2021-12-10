@@ -1,6 +1,7 @@
 <template>
   <div id="page-top">
     <MainVisual />
+    <News />
   </div>
 </template>
 
