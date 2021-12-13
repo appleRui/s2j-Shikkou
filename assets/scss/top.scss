@@ -36,7 +36,6 @@
 
       &-ttl {
         margin-bottom: 1rem;
-        ;
       }
 
       &-txt {}
@@ -47,11 +46,23 @@
       list-style-type: none;
 
       li {
-        padding: 1rem 0.5rem;
+        border-bottom: 1px solid #c0c0c0;
+
+        &:first-child {
+          border-top: 1px solid #c0c0c0;
+        }
 
         a {
+          padding: 1rem 0.5rem;
           color: black;
           text-decoration: none;
+          display: inline-block;
+          width: 100%;
+
+          &:hover {
+            background-color: rgba(193, 193, 193, 0.2);
+            border-radius: 0.3rem;
+          }
         }
 
         time {
@@ -60,13 +71,16 @@
       }
 
       &-tag {
+        text-align: center;
+        display: inline-block;
         margin: 0 1.5rem;
-        padding: 0.25rem 0.5rem;
+        padding: 0.15rem 0.5rem;
         color: #FFFFFF;
         background-color: red;
-        border-radius: 0.5rem;
+        border-radius: 0.3rem;
         font-size: 14px;
         font-weight: bold;
+        width: 75px;
       }
 
       &-txt {}
