@@ -13,7 +13,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data(){
+    return {
+      news: []
+    }
+  },
+  async asyncData( $sxios ){
+  }
+}
 </script>
 
 <style>

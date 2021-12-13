@@ -7,11 +7,51 @@
           <p class="news-wrapper-txt">- News -</p>
         </div>
         <ul class="news-wrapper__lists">
-          <li><a href="#"><time>2021-12-10</time><span class="news-wrapper__lists-tag">お願い</span><p class="d-inline news-wrapper__lists-txt">お知らせお知らせお知らせお知らせお知らせお知らせ</p></a></li>
-          <li><a href="#"><time>2021-12-10</time><span class="news-wrapper__lists-tag">お願い</span><p class="d-inline news-wrapper__lists-txt">お知らせお知らせお知らせお知らせお知らせお知らせ</p></a></li>
-          <li><a href="#"><time>2021-12-10</time><span class="news-wrapper__lists-tag">お願い</span><p class="d-inline news-wrapper__lists-txt">お知らせお知らせお知らせお知らせお知らせお知らせ</p></a></li>
-          <li><a href="#"><time>2021-12-10</time><span class="news-wrapper__lists-tag">お願い</span><p class="d-inline news-wrapper__lists-txt">お知らせお知らせお知らせお知らせお知らせお知らせ</p></a></li>
-          <li><a href="#"><time>2021-12-10</time><span class="news-wrapper__lists-tag">お願い</span><p class="d-inline news-wrapper__lists-txt">お知らせお知らせお知らせお知らせお知らせお知らせ</p></a></li>
+          <li>
+            <a href="#"
+              ><time>2021-12-10</time
+              ><span class="news-wrapper__lists-tag">お願い</span>
+              <p class="d-inline news-wrapper__lists-txt">
+                お知らせお知らせお知らせお知らせお知らせお知らせ
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><time>2021-12-10</time
+              ><span class="news-wrapper__lists-tag">お願い</span>
+              <p class="d-inline news-wrapper__lists-txt">
+                お知らせお知らせお知らせお知らせお知らせお知らせ
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><time>2021-12-10</time
+              ><span class="news-wrapper__lists-tag">お願い</span>
+              <p class="d-inline news-wrapper__lists-txt">
+                お知らせお知らせお知らせお知らせお知らせお知らせ
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><time>2021-12-10</time
+              ><span class="news-wrapper__lists-tag">お願い</span>
+              <p class="d-inline news-wrapper__lists-txt">
+                お知らせお知らせお知らせお知らせお知らせお知らせ
+              </p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><time>2021-12-10</time
+              ><span class="news-wrapper__lists-tag">お願い</span>
+              <p class="d-inline news-wrapper__lists-txt">
+                お知らせお知らせお知らせお知らせお知らせお知らせ
+              </p></a
+            >
+          </li>
         </ul>
       </div>
     </b-container>
@@ -19,7 +59,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style>
