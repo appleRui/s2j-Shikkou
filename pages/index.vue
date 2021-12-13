@@ -10,7 +10,9 @@ export default {
   async asyncData({ $axios }) {
     const url = `/v1/databases/${process.env.NOTION_DB}/query`;
     const current_day = new Date();
-    const current_day_format = `${current_day.getFullYear()}-${current_day.getMonth()+1}-${current_day.getDate()}`
+    const current_day_format = `${current_day.getFullYear()}-${
+      current_day.getMonth() + 1
+    }-${current_day.getDate()}`;
     const articles = await $axios.post(
       url,
       {
@@ -26,8 +28,8 @@ export default {
               property: "公開日",
               date: {
                 on_or_before: current_day_format,
-              }
-            }
+              },
+            },
           ],
         },
       },

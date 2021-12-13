@@ -43,7 +43,9 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    '~/plugins/notion'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -51,16 +53,28 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/proxy',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    // DOC:https://github.com/motdotla/dotenv
+    '@nuxtjs/dotenv'
   ],
+
+  proxy: {
+    '/api': {
+      target: 'https://api.notion.com',
+      pathRewrite: {
+        '^/api': '',
+      },
+    },
+  },
 
   bootstrapVue: {
     bootstrapCSS: false,
@@ -68,11 +82,14 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    // proxy: true,
+    prefix: '/api',
+  },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+// Build Configuration: https://go.nuxtjs.dev/config-build
+build: {},
 
   // DOC:https://nuxtjs.org/ja/docs/directory-structure/nuxt-config#runtimeconfig
-  privateRuntimeConfig: {}
+  privateRuntimeConfig: {},
 }

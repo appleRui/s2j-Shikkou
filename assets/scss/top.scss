@@ -1,3 +1,5 @@
+$text-color: #2d56a0;
+
 .mv {
   background-image: url("~/assets/images/mv.png");
   background-position: center;
@@ -27,6 +29,7 @@
 
 .news {
   padding: 6rem 0;
+  color: $text-color;
 
   &-wrapper {
     margin: 0 auto;
