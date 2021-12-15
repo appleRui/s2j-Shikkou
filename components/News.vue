@@ -29,7 +29,11 @@
 
 <script>
 export default {
-  props: ["articles"],
+  props: {
+    articles: {
+      type: Object,
+    }
+  },
   filters: {
     omittedText(text) {
       return text.length > 24 ? text.slice(0, 24) + "…" : text;
