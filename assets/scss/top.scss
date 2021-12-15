@@ -92,3 +92,16 @@ $text-color: #2d56a0;
   }
 
 }
+
+.contact{
+  padding: 6rem 0;
+  color: $text-color;
+  .contact-form__input {
+    height: auto;
+    padding: 1.25rem;
+  }
+  .contact-form__textarea{
+    height: 230px;
+    padding: 1.25rem;
+  }
+}

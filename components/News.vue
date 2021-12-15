@@ -1,5 +1,5 @@
 <template>
-  <div class="news">
+  <section class="news">
     <b-container class="news-container" style="max-width: 720px">
       <div class="news-wrapper">
         <div class="news-wrapper__ttl-area">
@@ -24,7 +24,7 @@
         </ul>
       </div>
     </b-container>
-  </div>
+  </section>
 </template>
 
 <script>

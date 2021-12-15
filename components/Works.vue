@@ -1,9 +1,9 @@
 <template>
   <section class="page-section" id="services">
     <b-container>
-      <div class="text-center">
-        <h2 class="section-heading text-uppercase">活動内容</h2>
-        <p class="section-subheading text-muted">- works -</p>
+      <div class="work-wrapper text-center">
+        <h2 class="work-wrapper--ttl">活動内容</h2>
+        <p class="work-wrapper--sub-ttl">- works -</p>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
