@@ -21,7 +21,7 @@
                 placeholder="名前(必須)"
                 required="required"
                 name=""
-                data-validation-required-message="Please enter your name."
+                v-model="setFormData.name"
               />
             </div>
             <div class="form-group">
@@ -33,6 +33,7 @@
                 required="required"
                 name=""
                 data-validation-required-message="Please enter your email address."
+                v-model="setFormData.studentNumber"
               />
             </div>
             <div class="form-group mb-md-0">
@@ -43,7 +44,7 @@
                 placeholder="件名(必須)"
                 required="required"
                 name=""
-                data-validation-required-message="Please enter your phone number."
+                v-model="setFormData.subject"
               />
             </div>
           </div>
@@ -61,6 +62,7 @@
                 placeholder="メール内容"
                 required="required"
                 name=""
+                v-model="setFormData.content"
               ></textarea>
             </div>
           </div>
@@ -83,6 +85,22 @@
 
 <script>
 export default {
+  props: {
+    formData: {
+      type: Object,
+      default: {},
+    },
+  },
+  computed: {
+    setFormData: {
+      get() {
+        return this.formData;
+      },
+      set(newVal) {
+        return this.$emit("update:formData", formData);
+      },
+    },
+  },
 };
 </script>
 

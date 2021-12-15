@@ -3,12 +3,22 @@
     <MainVisual />
     <News :articles="articles" />
     <Works />
-    <ContactForm />
+    <ContactForm :formData.sync="formData" />
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      formData: {
+        name: "",
+        studentNumber: "",
+        subject: "",
+        content: "",
+      },
+    };
+  },
   async asyncData({ $axios }) {
     const url = `/v1/databases/${process.env.NOTION_DB}/query`;
     const current_day = new Date();
