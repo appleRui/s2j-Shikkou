@@ -2,6 +2,7 @@
   <div id="page-top">
     <MainVisual />
     <News :articles="articles" />
+    <Works />
   </div>
 </template>
 

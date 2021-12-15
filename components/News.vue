@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <b-container class="news-container">
+    <b-container class="news-container" style="max-width: 720px">
       <div class="news-wrapper">
         <div class="news-wrapper__ttl-area">
           <h2 class="news-wrapper-ttl">お知らせ</h2>
@@ -37,15 +37,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-@media (min-width: 1200px) {
-  .container-xl,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container {
-    max-width: 720px;
-  }
-}
-</style>

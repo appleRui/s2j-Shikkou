@@ -64,7 +64,9 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // DOC:https://github.com/motdotla/dotenv
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    // DOC:https://www.npmjs.com/package/@nuxtjs/fontawesome
+    'nuxt-fontawesome',
   ],
 
   proxy: {
@@ -87,9 +89,15 @@ export default {
     prefix: '/api',
   },
 
-// Build Configuration: https://go.nuxtjs.dev/config-build
-build: {},
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 
   // DOC:https://nuxtjs.org/ja/docs/directory-structure/nuxt-config#runtimeconfig
   privateRuntimeConfig: {},
+  fontawesome: {
+    imports: [{
+      set: '@fortawesome/free-solid-svg-icons',
+      icons: ['fas'],
+    }],
+  }
 }
