@@ -8,44 +8,36 @@
       <form
         class="contact-form"
         name="sentMessage"
-        novalidate="novalidate"
-        action=""
       >
         <div class="contact-form__lg-content row align-items-stretch mb-5">
           <div class="col-md-6">
             <div class="form-group">
-              <input
-                class="contact-form__input form-control"
-                id="name"
-                type="text"
-                placeholder="名前(必須)"
-                required="required"
-                name=""
+              <b-form-input
                 v-model="setFormData.name"
-              />
+                id="name"
+                class="contact-form__input form-control"
+                placeholder="名前(必須)"
+                required
+              ></b-form-input>
             </div>
             <div class="form-group">
-              <input
-                class="contact-form__input form-control"
-                id="email"
+              <b-form-input
+                v-model="setFormData.studentEmail"
                 type="email"
+                id="email"
+                class="contact-form__input form-control"
                 placeholder="学籍メールアドレス(必須)"
-                required="required"
-                name=""
-                data-validation-required-message="Please enter your email address."
-                v-model="setFormData.studentNumber"
-              />
+                required
+              ></b-form-input>
             </div>
             <div class="form-group mb-md-0">
-              <input
-                class="contact-form__input form-control"
-                id="subject"
-                type="text"
-                placeholder="件名(必須)"
-                required="required"
-                name=""
+              <b-form-input
                 v-model="setFormData.subject"
-              />
+                id="subject"
+                class="contact-form__input form-control"
+                placeholder="件名(必須)"
+                required
+              ></b-form-input>
             </div>
           </div>
           <div class="col-md-6">
@@ -56,31 +48,43 @@
                 mb-md-0
               "
             >
-              <textarea
+              <b-form-textarea
                 class="contact-form__textarea form-control"
-                id="message"
-                placeholder="メール内容"
-                required="required"
-                name=""
+                id="contetn"
                 v-model="setFormData.content"
-              ></textarea>
+                placeholder="メール内容"
+                required
+              ></b-form-textarea>
             </div>
           </div>
         </div>
         <div class="text-center">
           <div id="success"></div>
-          <button
+          <b-button
             class="btn btn-primary btn-lg"
             id="sendMessageButton"
-            onClick="postToGoogle()"
-            type="submit"
+            variant="primary"
+            v-b-modal.configm
           >
             送信
-          </button>
+          </b-button>
         </div>
       </form>
     </b-container>
+    <b-modal scrollable id="configm" title="確認画面" @ok="handleOk">
+      <div class="configm-wrapper">
+        <p class="configm-wrapper__label"><b>名前</b></p>
+        <p class="configm-wrapper__name">{{ setFormData.name }}</p>
+        <p class="configm-wrapper__label"><b>学籍メールアドレス</b></p>
+        <p class="configm-wrapper__email">{{ setFormData.studentEmail }}</p>
+        <p class="configm-wrapper__label"><b>件名</b></p>
+        <p class="configm-wrapper__subject">{{ setFormData.subject }}</p>
+        <p class="configm-wrapper__label"><b>問い合わせ内容</b></p>
+        <p class="configm-wrapper__content">{{ setFormData.content }}</p>
+      </div>
+    </b-modal>
   </section>
+  <!-- <b-button v-b-modal.modal-1>Launch demo modal</b-button> -->
 </template>
 
 <script>
@@ -99,6 +103,18 @@ export default {
       set(newVal) {
         return this.$emit("update:formData", formData);
       },
+    },
+  },
+  methods: {
+    handleOk(bvModalEvt) {
+      bvModalEvt.preventDefault();
+      this.handleSubmit();
+    },
+    handleSubmit() {
+      this.formData = "";
+      this.$nextTick(() => {
+        this.$bvModal.hide("configm");
+      });
     },
   },
 };

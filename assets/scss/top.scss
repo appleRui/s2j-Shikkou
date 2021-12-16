@@ -54,7 +54,7 @@ $text-color: #2d56a0;
         &:first-child {
           border-top: 1px solid #c0c0c0;
         }
-
+        
         a {
           padding: 1rem 0.5rem;
           color: black;
@@ -67,13 +67,13 @@ $text-color: #2d56a0;
             border-radius: 0.3rem;
           }
         }
-
-        time {
-          margin: 0 1.5rem;
-        }
+        
       }
-
-      &-tag {
+      &__timestamp{
+        margin: 0 1.5rem;
+        width: 19%;
+      }
+      &__tag {
         text-align: center;
         display: inline-block;
         margin: 0 1.5rem;
@@ -83,14 +83,20 @@ $text-color: #2d56a0;
         border-radius: 0.3rem;
         font-size: 14px;
         font-weight: bold;
-        width: 75px;
+        width: 8%;
       }
 
-      &-txt {}
+
+      &-txt {
+        width: 73%;
+      }
     }
 
   }
+}
 
+.works{
+  
 }
 
 .contact{

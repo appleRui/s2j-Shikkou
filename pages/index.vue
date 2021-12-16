@@ -13,7 +13,7 @@ export default {
     return {
       formData: {
         name: "",
-        studentNumber: "",
+        studentEmail: "",
         subject: "",
         content: "",
       },

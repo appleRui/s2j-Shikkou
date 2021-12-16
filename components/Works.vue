@@ -1,5 +1,5 @@
 <template>
-  <section class="page-section" id="services">
+  <section class="works">
     <b-container>
       <div class="work-wrapper text-center">
         <h2 class="work-wrapper--ttl">活動内容</h2>

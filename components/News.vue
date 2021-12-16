@@ -1,6 +1,6 @@
 <template>
   <section class="news">
-    <b-container class="news-container" style="max-width: 720px">
+    <b-container class="news-container">
       <div class="news-wrapper">
         <div class="news-wrapper__ttl-area">
           <h2 class="news-wrapper-ttl">お知らせ</h2>
@@ -9,8 +9,8 @@
         <ul class="news-wrapper__lists">
           <li v-for="article in articles" :key="article['id']">
             <a :href="article['url']"
-              ><time>{{ article.properties["公開日"].date.start }}</time
-              ><span class="news-wrapper__lists-tag">{{
+              ><time class="news-wrapper__lists__timestamp">{{ article.properties["公開日"].date.start }}</time
+              ><span class="news-wrapper__lists__tag">{{
                 article.properties["タグ"].select.name
               }}</span>
               <p class="d-inline news-wrapper__lists-txt">
@@ -31,7 +31,7 @@
 export default {
   props: {
     articles: {
-      type: Object,
+      type: Array,
     }
   },
   filters: {
