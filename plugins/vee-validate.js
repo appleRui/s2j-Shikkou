@@ -5,18 +5,14 @@ import {
   extend,
   localize
 } from 'vee-validate';
-import {
-  required,
-  email
-} from 'vee-validate/dist/rules';
+import {required, email, min} from 'vee-validate/dist/rules';
 import ja from 'vee-validate/dist/locale/ja.json';
 
 let rule;
-for (rule in originalRules) {
-  extend(rule, {
-    ...originalRules[rule],
-  });
-}
+extend('required', required);
+extend('email', email);
+extend('min', min);
+
 
 localize('ja', ja);
 
