@@ -7,8 +7,18 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style>
-</style>
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
+.footer {
+  color: white;
+  background-color: $text-color;
+  &-txt {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+</style>>

@@ -1,9 +1,9 @@
 <template>
   <section class="contact">
     <b-container>
-      <div class="contact-wrapper text-center">
-        <h2 class="contact-wrapper--ttl">お問い合わせ</h2>
-        <p class="contact-wrapper--sub-ttl">- contact -</p>
+      <div class="ttl-content text-center">
+        <h2 class="ttl">お問い合わせ</h2>
+        <p class="txt">- contact -</p>
       </div>
       <validation-observer ref="obs" v-slot="ObserverProps">
         <form class="contact-form" name="sentMessage">
@@ -101,7 +101,9 @@
         <p class="configm-wrapper__label"><b>名前</b></p>
         <p class="configm-wrapper__name">{{ setFormData.name.data }}</p>
         <p class="configm-wrapper__label"><b>学籍メールアドレス</b></p>
-        <p class="configm-wrapper__email">{{ setFormData.studentEmail.data }}</p>
+        <p class="configm-wrapper__email">
+          {{ setFormData.studentEmail.data }}
+        </p>
         <p class="configm-wrapper__label"><b>件名</b></p>
         <p class="configm-wrapper__subject">{{ setFormData.subject.data }}</p>
         <p class="configm-wrapper__label"><b>問い合わせ内容</b></p>
@@ -139,5 +141,21 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
+.contact {
+  padding: 6rem 0;
+  .contact-form__input {
+    height: auto;
+    padding: 1.25rem;
+  }
+  .contact-form__textarea {
+    height: 230px;
+    padding: 1.25rem;
+  }
+  .error {
+    color: red;
+  }
+}
 </style>
