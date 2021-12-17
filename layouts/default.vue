@@ -2,6 +2,6 @@
   <div id="app">
     <Header />
       <Nuxt />
-    <Fotter />
+    <Footer />
   </div>
 </template>
