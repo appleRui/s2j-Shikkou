@@ -11,39 +11,51 @@
             <div class="col-md-6">
               <div class="form-group">
                 <validation-provider
-                  v-slot="ProviderProps" name="名前"
+                  v-slot="ProviderProps"
+                  name="名前"
                   rules="required"
                 >
                   <b-form-input
-                    v-model="setFormData.name"
+                    v-model="setFormData.name.data"
                     id="name"
                     class="contact-form__input form-control"
                     placeholder="名前(必須)"
+                    :name="setFormData.name.name"
                     required
                   ></b-form-input>
                   <div class="error">{{ ProviderProps.errors[0] }}</div>
                 </validation-provider>
               </div>
               <div class="form-group">
-                <validation-provider v-slot="ProviderProps" rules="required|email" name="メールアドレス">
+                <validation-provider
+                  v-slot="ProviderProps"
+                  rules="required|email"
+                  name="メールアドレス"
+                >
                   <b-form-input
-                    v-model="setFormData.studentEmail"
+                    v-model="setFormData.studentEmail.data"
                     type="email"
                     id="email"
                     class="contact-form__input form-control"
                     placeholder="学籍メールアドレス(必須)"
+                    :name="setFormData.studentEmail.name"
                     required
                   ></b-form-input>
                   <div class="error">{{ ProviderProps.errors[0] }}</div>
                 </validation-provider>
               </div>
               <div class="form-group mb-md-0">
-                <validation-provider v-slot="ProviderProps" rules="required|min:3" name="件名">
+                <validation-provider
+                  v-slot="ProviderProps"
+                  rules="required|min:3"
+                  name="件名"
+                >
                   <b-form-input
-                    v-model="setFormData.subject"
+                    v-model="setFormData.subject.data"
                     id="subject"
                     class="contact-form__input form-control"
                     placeholder="件名(必須)"
+                    :name="setFormData.subject.name"
                     required
                   ></b-form-input>
                   <div class="error">{{ ProviderProps.errors[0] }}</div>
@@ -51,19 +63,24 @@
               </div>
             </div>
             <div class="col-md-6">
-              <validation-provider v-slot="ProviderProps" rules="required|min:12" name="お問い合わせ内容">
+              <validation-provider
+                v-slot="ProviderProps"
+                rules="required|min:12"
+                name="お問い合わせ内容"
+              >
                 <b-form-textarea
                   class="contact-form__textarea form-control"
                   id="contetn"
-                  v-model="setFormData.content"
+                  v-model="setFormData.content.data"
                   placeholder="メール内容"
+                  :name="setFormData.content.name"
                   required
                 ></b-form-textarea>
                 <div class="error">{{ ProviderProps.errors[0] }}</div>
               </validation-provider>
             </div>
           </div>
-          <div v-show="!ObserverProps.invalid" class="text-right">
+          <div v-show="!ObserverProps.invalid" class="text-center">
             <div id="success"></div>
             <b-button
               class="btn btn-primary"
@@ -71,6 +88,7 @@
               variant="primary"
               v-b-modal.configm
               :disabled="ObserverProps.invalid || !ObserverProps.validated"
+              size="lg"
             >
               確認
             </b-button>
@@ -81,13 +99,13 @@
     <b-modal scrollable id="configm" title="確認画面" @ok="handleOk">
       <div class="configm-wrapper">
         <p class="configm-wrapper__label"><b>名前</b></p>
-        <p class="configm-wrapper__name">{{ setFormData.name }}</p>
+        <p class="configm-wrapper__name">{{ setFormData.name.data }}</p>
         <p class="configm-wrapper__label"><b>学籍メールアドレス</b></p>
-        <p class="configm-wrapper__email">{{ setFormData.studentEmail }}</p>
+        <p class="configm-wrapper__email">{{ setFormData.studentEmail.data }}</p>
         <p class="configm-wrapper__label"><b>件名</b></p>
-        <p class="configm-wrapper__subject">{{ setFormData.subject }}</p>
+        <p class="configm-wrapper__subject">{{ setFormData.subject.data }}</p>
         <p class="configm-wrapper__label"><b>問い合わせ内容</b></p>
-        <p class="configm-wrapper__content">{{ setFormData.content }}</p>
+        <p class="configm-wrapper__content">{{ setFormData.content.data }}</p>
       </div>
     </b-modal>
   </section>
@@ -115,13 +133,7 @@ export default {
   methods: {
     handleOk(bvModalEvt) {
       bvModalEvt.preventDefault();
-      this.handleSubmit();
-    },
-    handleSubmit() {
-      this.formData = "";
-      this.$nextTick(() => {
-        this.$bvModal.hide("configm");
-      });
+      this.$emit("handleSubmit");
     },
   },
 };
