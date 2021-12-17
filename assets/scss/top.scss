@@ -1,5 +1,10 @@
 $text-color: #2d56a0;
 
+.ttl-content{
+  color: $text-color;
+  text-align: center;
+}
+
 .mv {
   background-image: url("~/assets/images/mv.png");
   background-position: center;

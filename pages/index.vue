@@ -3,6 +3,7 @@
     <MainVisual />
     <News :articles="articles" />
     <Works />
+    <Faq />
   </div>
 </template>
 
