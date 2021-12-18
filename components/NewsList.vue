@@ -26,9 +26,11 @@ export default {
     },
     perPage: {
       type: Number,
+      default: 10,
     },
     currentPage: {
       type: Number,
+      default: 1,
     },
   },
   computed: {
