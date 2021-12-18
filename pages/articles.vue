@@ -1,15 +1,33 @@
 <template>
-  <div id="page-top">
-    <MainVisual />
-    <News :articles="articles" />
-    <Works />
-    <Faq />
-  </div>
+  <b-container>
+    <div class="page-content">
+      <div class="ttl-content text-left">
+        <h1 class="ttl">お知らせ一覧</h1>
+      </div>
+      <div class="articles">
+        <div class="articles-wrapper">
+          <NewsList :articles="articles" :perPage="perPage" :currentPage="currentPage" />
+          <b-pagination
+            v-model="currentPage"
+            :total-rows="rows"
+            :per-page="perPage"
+            aria-controls="news-lists"
+            align="center"
+          ></b-pagination>
+        </div>
+      </div>
+    </div>
+  </b-container>
 </template>
 
 <script>
 export default {
-  data() {},
+  data() {
+    return {
+      perPage: 10,
+      currentPage: 1,
+    };
+  },
   async asyncData({ $axios }) {
     const url = `/v1/databases/${process.env.NOTION_DB}/query`;
     const current_day = new Date();
@@ -19,7 +37,6 @@ export default {
     const articles = await $axios.post(
       url,
       {
-        page_size: 5,
         filter: {
           and: [
             {
@@ -49,6 +66,16 @@ export default {
       articles: articles.data.results,
     };
   },
-  methods: {},
+  computed: {
+    rows({articles}) {
+      return articles.length;
+    },
+  },
 };
 </script>
+
+<style lang="scss" scoped>
+.articles {
+  padding: 1.75rem 0;
+}
+</style>

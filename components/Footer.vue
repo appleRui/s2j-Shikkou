@@ -15,7 +15,7 @@ export default {};
 
 .footer {
   color: white;
-  background-color: $text-color;
+  background-color: $secondary;
   &-txt {
     text-align: center;
     margin-top: 1rem;
