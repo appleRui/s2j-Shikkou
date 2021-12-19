@@ -1,5 +1,5 @@
 <template>
-  <section class="works">
+  <section id="works">
     <b-container>
       <div class="ttl-content">
         <h2 class="ttl">活動内容</h2>
@@ -58,7 +58,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.works {
+#works {
   padding: 4rem 0;
 }
 </style>

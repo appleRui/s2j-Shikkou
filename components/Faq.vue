@@ -1,5 +1,5 @@
 <template>
-  <section class="faq">
+  <section id="faq">
     <b-container>
       <div class="ttl-content">
         <h2 class="ttl">よくある質問</h2>
@@ -32,7 +32,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-.faq {
+#faq {
   padding: 4rem 0;;
   .faq-row {
     font-size: 20px;

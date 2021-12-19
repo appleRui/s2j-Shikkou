@@ -1,11 +1,27 @@
 <template>
-  <b-navbar variant="faded" type="light" class="fixed-top">
+  <b-navbar
+    class="header"
+    toggleable="lg"
+    variant="faded"
+    type="light"
+    fixed="top"
+  >
     <b-container fluid>
-      <b-navbar-brand tag="h1">東京電機大学</b-navbar-brand>
+      <b-navbar-brand class="heaader__logo" tag="h1" to="/"
+        ><img
+          class="heaader__logo-img"
+          src="https://www.dendai.ac.jp/common/images/global/logo_01.svg"
+          alt=""
+      /></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/">お知らせ</b-nav-item>
+          <b-nav-item to="#news">お知らせ</b-nav-item>
+          <b-nav-item to="#works">活動内容</b-nav-item>
+          <b-nav-item to="#faq">よくある質問</b-nav-item>
+          <b-nav-item toggle-class="text-primary" to="/contactForm"
+            >お問い合わせ</b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -13,16 +29,26 @@
 </template>
 
 <script>
-export default {
-  data(){
-    return {
-      news: []
-    }
-  },
-  async asyncData( $sxios ){
-  }
-}
+export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
+.heaader {
+  &__logo {
+    &-img {
+      height: 32px;
+    }
+  }
+}
+.nav-item{
+  .nav-item{
+    .nav-item{
+      a{
+        color: #fff !important;
+      }
+    }
+  }
+}
 </style>

@@ -45,6 +45,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
 #news-lists {
   list-style-type: none;
 
@@ -84,6 +86,38 @@ export default {
     }
     &-txt {
       width: 73%;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .news-list {
+    &__tag {
+      width: 15% !important;
+    }
+    &__txt {
+      margin: 0 0.5rem;
+      display: block !important;
+      margin-left: 1.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .news-list {
+    &__times {
+      margin: 0 0.5rem !important;
+    }
+    &__tag {
+      margin: 0 0.5rem !important;
+      width: 24% !important;
+    }
+    &__txt {
+      margin: 0 0.5rem;
+      display: block !important;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
     }
   }
 }
