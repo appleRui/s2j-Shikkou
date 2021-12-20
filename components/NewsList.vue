@@ -78,7 +78,7 @@ export default {
       margin: 0 1.5rem;
       padding: 0.15rem 0.5rem;
       color: #ffffff;
-      background-color: red;
+      background-color: $secondary;
       border-radius: 0.3rem;
       font-size: 14px;
       font-weight: bold;
