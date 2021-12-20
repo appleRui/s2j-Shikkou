@@ -14,6 +14,7 @@ export default {};
 @import "@/assets/scss/variables";
 
 .footer {
+  margin-top: auto;
   color: white;
   background-color: $secondary;
   &-txt {
