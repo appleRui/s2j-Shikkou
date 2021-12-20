@@ -8,10 +8,11 @@
   box-sizing: border-box;
 }
 
-.page-content{
+.page-content {
   margin: 6rem 0 4rem 0;
   color: $secondary;
-  .ttl{
+
+  .ttl {
     font-weight: bold;
   }
 }
@@ -19,4 +20,12 @@
 .ttl-content {
   color: $secondary;
   text-align: center;
+
+  .txt {
+    &::after,
+    &::before {
+      margin: 0 0.25rem;
+      content: "-";
+    }
+  }
 }

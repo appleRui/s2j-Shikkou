@@ -3,7 +3,7 @@
     <b-container>
       <div class="ttl-content">
         <h2 class="ttl">活動内容</h2>
-        <p class="txt">- works -</p>
+        <p class="txt">works</p>
       </div>
       <div class="works__cards row text-center">
         <div class="work-card col-md-4">

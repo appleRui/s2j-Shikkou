@@ -3,12 +3,16 @@
     <b-container>
       <div class="ttl-content">
         <h2 class="ttl">よくある質問</h2>
-        <p class="txt">- FAQ -</p>
+        <p class="txt">FAQ</p>
       </div>
       <div class="faq-wrapper">
         <dl class="faq-row">
-          <dt class="faq-row__question">質問分</dt>
-          <dt class="faq-row__answer">回答分</dt>
+          <dt class="faq-row__question">
+            執行委員会への見学をしたいのですがどうすればいいですか？
+          </dt>
+          <dt class="faq-row__answer">
+            ホームページの上にございますお問い合わせフォームからご連絡ください
+          </dt>
         </dl>
         <dl class="faq-row">
           <dt class="faq-row__question">質問分</dt>
@@ -33,7 +37,7 @@ export default {};
 
 <style lang="scss" scoped>
 #faq {
-  padding: 4rem 0;;
+  padding: 4rem 0;
   .faq-row {
     font-size: 20px;
     margin-bottom: 2rem; //各Q&Aの下に余白

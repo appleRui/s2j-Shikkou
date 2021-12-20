@@ -3,7 +3,7 @@
     <b-container class="news-container">
       <div class="ttl-content">
         <h2 class="ttl">お知らせ</h2>
-        <p class="txt">- News -</p>
+        <p class="txt">News</p>
       </div>
       <div class="news-wrapper">
         <NewsList :articles="articles"/>
