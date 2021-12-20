@@ -116,7 +116,7 @@ export default {
     &__txt {
       margin: 0 0.5rem;
       display: block !important;
-      margin-top: 0.25rem;
+      margin-top: 0.5rem;
       margin-bottom: 0.25rem;
     }
   }

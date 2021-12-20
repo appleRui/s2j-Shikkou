@@ -42,11 +42,20 @@ export default {};
     }
   }
 }
-.nav-item{
-  .nav-item{
-    .nav-item{
-      a{
+.nav-item {
+  .nav-item {
+    .nav-item {
+      a {
         color: #fff !important;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .heaader {
+    &__logo {
+      &-img {
+        height: 27px;
       }
     }
   }
