@@ -98,5 +98,10 @@ export default {
       set: '@fortawesome/free-solid-svg-icons',
       icons: ['fas'],
     }],
+  },
+  env: {
+    NOTION_TOKEN: process.env.NOTION_TOKEN,
+    NOTION_DB: process.env.NOTION_DB,
+    GOOGLE_FORM: process.env.GOOGLE_FORM,
   }
 }
