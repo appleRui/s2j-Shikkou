@@ -31,7 +31,7 @@
           </font-awesome-layers>
           <h4 class="work-card__ttl my-3">定例会</h4>
           <p class="work-card__txt text-left">
-            定例会は、毎週水曜日に21時30分から行っております。そこでは役員がその週にあった出来事等を報告・連絡・相談しています。
+            定例会は、毎週土曜日に21時30分から行っております。そこでは役員がその週にあった出来事等を報告・連絡・相談しています。
           </p>
         </div>
         <div class="work-card col-md-4">
