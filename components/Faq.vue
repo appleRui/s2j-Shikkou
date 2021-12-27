@@ -15,16 +15,34 @@
           </dt>
         </dl>
         <dl class="faq-row">
-          <dt class="faq-row__question">執行委員会の見学はいつでもできますか？</dt>
-          <dt class="faq-row__answer">いつでも可能です。毎週土曜日21:30からオンラインで定例会を行っておりますので、TwitterのDMまたはお問い合わせフォームからご連絡ください</dt>
+          <dt class="faq-row__question">
+            執行委員会の見学はいつでもできますか？
+          </dt>
+          <dt class="faq-row__answer">
+            いつでも可能です。毎週土曜日21:30からオンラインで定例会を行っておりますので、<a
+              class="twiiter-icon"
+              href="https://twitter.com/tdu_2info"
+              target="”_blank”"
+              rel="”noopener”"
+              >Twitter</a
+            >のDMまたはお問い合わせフォームからご連絡ください
+          </dt>
         </dl>
         <dl class="faq-row">
-          <dt class="faq-row__question">執行委員会の入部には入部届や退部届はありますか？</dt>
-          <dt class="faq-row__answer">ございません。入部1年目は執行補佐として勤めてもらい2年目から執行委員として勤めていただきます</dt>
+          <dt class="faq-row__question">
+            執行委員会の入部には入部届や退部届はありますか？
+          </dt>
+          <dt class="faq-row__answer">
+            ございません。入部1年目は執行補佐として勤めてもらい2年目から執行委員として勤めていただきます
+          </dt>
         </dl>
         <dl class="faq-row">
-          <dt class="faq-row__question">夜間部の人でも中間部のサークルに入ることは可能ですか？</dt>
-          <dt class="faq-row__answer">入部したい団体に直接連絡を取るか本委員会にご相談ください</dt>
+          <dt class="faq-row__question">
+            夜間部の人でも中間部のサークルに入ることは可能ですか？
+          </dt>
+          <dt class="faq-row__answer">
+            入部したい団体に直接連絡を取るか本委員会にご相談ください
+          </dt>
         </dl>
       </div>
     </b-container>
@@ -41,6 +59,11 @@ export default {};
   .faq-row {
     font-size: 20px;
     margin-bottom: 2rem; //各Q&Aの下に余白
+
+    .twiiter-icon{
+      text-decoration: none;
+    }
+
     &__question,
     &__answer {
       position: relative;
