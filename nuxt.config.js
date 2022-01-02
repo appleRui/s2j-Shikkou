@@ -101,5 +101,6 @@ export default {
     NOTION_TOKEN: process.env.NOTION_TOKEN,
     NOTION_DB: process.env.NOTION_DB,
     GOOGLE_FORM: process.env.GOOGLE_FORM,
+    API_URL: process.env.API_URL,
   }
 }
