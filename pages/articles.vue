@@ -37,22 +37,22 @@ export default {
     const articles = await $axios.post(
       url,
       {
-        filter: {
-          and: [
-            {
-              property: "公開",
-              checkbox: {
-                equals: true,
-              },
-            },
-            {
-              property: "公開日",
-              date: {
-                on_or_before: current_day_format,
-              },
-            },
-          ],
-        },
+        // filter: {
+        //   and: [
+        //     {
+        //       property: "公開",
+        //       checkbox: {
+        //         equals: true,
+        //       },
+        //     },
+        //     {
+        //       property: "公開日",
+        //       date: {
+        //         on_or_before: current_day_format,
+        //       },
+        //     },
+        //   ],
+        // },
       },
       {
         headers: {

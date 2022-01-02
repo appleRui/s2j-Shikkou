@@ -13,30 +13,29 @@ export default {
   async asyncData({ $axios }) {
     const url = `/v1/databases/${process.env.NOTION_DB}/query`;
     const current_day = new Date();
-    const current_day_format = `${current_day.getFullYear()}-${
-      current_day.getMonth() + 1
-    }-${current_day.getDate()}`;
+    const current_day_format = current_day.getFullYear() + "-" +  (current_day.getMonth() + 1).toString().padStart(2,"0") + "-" + current_day.getDate().toString().padStart(2,"0")
+    const option = {
+      filter: {
+        "and": [
+          {
+            "property": "公開",
+            "checkbox": {
+              "equals": true,
+            },
+          },
+          {
+            "property": "公開日",
+            "date": {
+              "on_or_before": current_day_format,
+            },
+          },
+        ],
+      },
+      page_size: 5,
+    };
     const articles = await $axios.post(
       url,
-      {
-        page_size: 5,
-        filter: {
-          and: [
-            {
-              property: "公開",
-              checkbox: {
-                equals: true,
-              },
-            },
-            {
-              property: "公開日",
-              date: {
-                on_or_before: current_day_format,
-              },
-            },
-          ],
-        },
-      },
+      JSON.stringify(option),
       {
         headers: {
           Authorization: "Bearer " + process.env.NOTION_TOKEN,

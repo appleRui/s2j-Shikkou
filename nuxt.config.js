@@ -44,6 +44,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vee-validate',
+    '~/plugins/axios',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -59,7 +60,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
-    '@nuxtjs/proxy',
+    // '@nuxtjs/proxy',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // DOC:https://github.com/motdotla/dotenv
@@ -67,13 +68,15 @@ export default {
     // DOC:https://www.npmjs.com/package/@nuxtjs/fontawesome
     'nuxt-fontawesome',
   ],
+  axios: {
+    proxy: true,
+    prefix: '/api/',
+  },
 
   proxy: {
-    '/api': {
+    '/api/': {
       target: 'https://api.notion.com',
-      pathRewrite: {
-        '^/api': '',
-      },
+      pathRewrite: {'^/api/': ''}
     },
   },
 
@@ -83,10 +86,6 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // proxy: true,
-    prefix: '/api',
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
