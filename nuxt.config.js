@@ -1,3 +1,4 @@
+const { NOTION_DB, NOTION_TOKEN } = process.env;
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -41,9 +42,11 @@ export default {
     '~/assets/scss/common',
   ],
 
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vee-validate',
+    '~/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -75,7 +78,9 @@ export default {
   proxy: {
     '/api/': {
       target: 'https://api.notion.com',
-      pathRewrite: {'^/api/': ''}
+      pathRewrite: {
+        '^/api/': ''
+      }
     },
   },
 
@@ -89,18 +94,22 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // DOC:https://nuxtjs.org/ja/docs/directory-structure/nuxt-config#runtimeconfig
-  privateRuntimeConfig: {},
   fontawesome: {
     imports: [{
       set: '@fortawesome/free-solid-svg-icons',
       icons: ['fas'],
     }],
   },
-  env: {
-    NOTION_TOKEN: process.env.NOTION_TOKEN,
-    NOTION_DB: process.env.NOTION_DB,
+
+  // DOC:https://nuxtjs.org/ja/docs/directory-structure/nuxt-config#runtimeconfig
+  publicRuntimeConfig: {
+    NOTION_DB: process.env.NOTION_DB !== 'production' ? NOTION_DB : undefined,
+    NOTION_TOKEN: process.env.NOTION_TOKEN !== 'production' ? NOTION_TOKEN : undefined
+  },
+  privateRuntimeConfig: {
+    NOTION_TOKEN: NOTION_TOKEN,
+    NOTION_DB: NOTION_DB,
     GOOGLE_FORM: process.env.GOOGLE_FORM,
     API_URL: process.env.API_URL,
-  }
+  },
 }
