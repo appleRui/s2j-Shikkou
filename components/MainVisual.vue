@@ -4,7 +4,7 @@
       <h2 class="mv-wrapper__welcome-txt">ようこそ</h2>
       <h2 class="mv-wrapper__welcome-ttl">二部執行委員会へ</h2>
       <b-button
-        to="/contactform/"
+        to="/contactform"
         class="mv-wrapper__contact-btn"
         size="lg"
         variant="primary"
