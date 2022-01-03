@@ -32,7 +32,7 @@ export default {
       currentPage: 1,
     };
   },
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, $config }) {
     const url = `/v1/databases/${$config.NOTION_DB}/query`;
     const current_day = new Date();
     const current_day_format =
