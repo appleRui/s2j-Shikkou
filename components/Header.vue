@@ -19,7 +19,7 @@
           <b-nav-item to="/articles">お知らせ</b-nav-item>
           <b-nav-item to="/#works">活動内容</b-nav-item>
           <b-nav-item to="/#faq">よくある質問</b-nav-item>
-          <b-nav-item toggle-class="text-primary" to="/contactform/"
+          <b-nav-item toggle-class="text-primary" to="/contactform"
             >お問い合わせ</b-nav-item
           >
         </b-navbar-nav>
