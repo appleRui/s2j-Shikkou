@@ -1,4 +1,5 @@
 const { NOTION_DB, NOTION_TOKEN } = process.env;
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -46,7 +47,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vee-validate',
-    // '~/plugins/axios'
+    '~/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -103,8 +104,8 @@ export default {
 
   // DOC:https://nuxtjs.org/ja/docs/directory-structure/nuxt-config#runtimeconfig
   publicRuntimeConfig: {
-    NOTION_DB: process.env.NOTION_DB !== 'production' ? NOTION_DB : undefined,
-    NOTION_TOKEN: process.env.NOTION_TOKEN !== 'production' ? NOTION_TOKEN : undefined
+    NOTION_DB: process.env.NODE_ENV !== 'production' ? NOTION_DB : undefined,
+    NOTION_TOKEN: process.env.NODE_ENV !== 'production' ? NOTION_TOKEN : undefined
   },
   privateRuntimeConfig: {
     NOTION_TOKEN: NOTION_TOKEN,

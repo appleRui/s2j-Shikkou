@@ -38,13 +38,7 @@ export default {
       },
       page_size: 5,
     };
-    const articles = await $axios.post(url, JSON.stringify(option), {
-      headers: {
-        Authorization: "Bearer " + $config.NOTION_TOKEN,
-        "Notion-Version": "2021-08-16",
-        "Content-Type": "application/json",
-      },
-    });
+    const articles = await $axios.post(url, JSON.stringify(option), {});
     return {
       articles: articles.data.results,
     };
