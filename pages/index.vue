@@ -43,6 +43,5 @@ export default {
       articles: articles.data.results,
     };
   },
-  methods: {},
 };
 </script>

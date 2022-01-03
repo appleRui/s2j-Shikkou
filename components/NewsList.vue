@@ -5,9 +5,11 @@
         ><time class="news-list__times">{{
           article.properties["公開日"].date.start
         }}</time
-        ><span class="news-list__tag">{{
-          article.properties["タグ"].select.name
-        }}</span>
+        ><span
+          class="news-list__tag"
+          v-if="article.properties['タグ'].select"
+          >{{ article.properties["タグ"].select.name }}</span
+        >
         <p class="d-inline news-list__txt">
           {{
             article.properties["タイトル"].title[0].text.content | omittedText
@@ -39,6 +41,11 @@ export default {
         (this.currentPage - 1) * this.perPage,
         this.currentPage * this.perPage
       );
+    },
+  },
+  filters: {
+    omittedText(text) {
+      return text.length > 24 ? text.slice(0, 24) + "…" : text;
     },
   },
 };
