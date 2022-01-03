@@ -16,10 +16,10 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="articles">お知らせ</b-nav-item>
+          <b-nav-item to="/articles">お知らせ</b-nav-item>
           <b-nav-item to="/#works">活動内容</b-nav-item>
           <b-nav-item to="/#faq">よくある質問</b-nav-item>
-          <b-nav-item toggle-class="text-primary" to="/contactForm"
+          <b-nav-item toggle-class="text-primary" to="/contactform"
             >お問い合わせ</b-nav-item
           >
         </b-navbar-nav>
