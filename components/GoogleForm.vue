@@ -16,7 +16,7 @@
 export default {
   data() {
     return {
-      form_url: process.env.GOOGLE_FORM + "?embedded=true",
+      form_url: $config.GOOGLE_FORM + "?embedded=true",
     };
   },
 };
