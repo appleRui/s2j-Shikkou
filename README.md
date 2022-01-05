@@ -9,6 +9,10 @@ which was developed using Nuxt and NotionAPI.
   - Nuxt
   - Notion API
 
+## PackageVersion
+- `nuxt 2.15.7`
+-  `@nuxtjs/axios ^5.13.6`
+-  `bootstrap-vue ^2.21.2`
 
 ## Installation
 
@@ -17,12 +21,12 @@ which was developed using Nuxt and NotionAPI.
 #### Install the depedencies
 
 ```bash
-yarn install
+npm install
 ```
 
 #### Start the project
 
 ```bash
 # for dev
-yarn dev
+npm run dev
 ```
