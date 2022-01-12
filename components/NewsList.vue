@@ -1,8 +1,11 @@
 <template>
   <ul id="news-lists">
     <li class="news-list" v-for="article in sliceData" :key="article['id']">
-      <a class="news-list__link" :href="article['url']"
-        ><time class="news-list__times">{{
+      <nuxt-link
+        class="news-list__link"
+        :to="{ name: 'article-id', params: { id: article['id'] } }"
+      >
+        <time class="news-list__times">{{
           article.properties["公開日"].date.start
         }}</time
         ><span
@@ -14,7 +17,7 @@
           {{
             article.properties["タイトル"].title[0].text.content | omittedText
           }}
-        </p></a
+        </p></nuxt-link
       >
     </li>
   </ul>

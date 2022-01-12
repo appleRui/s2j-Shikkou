@@ -1,4 +1,9 @@
-const { NOTION_DB, NOTION_TOKEN, GOOGLE_FORM,  API_URL} = process.env;
+const {
+  NOTION_DB,
+  NOTION_TOKEN,
+  GOOGLE_FORM,
+  API_URL
+} = process.env;
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -54,8 +59,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module'
+    // https://github.com/janniks/vue-notion
+    "vue-notion/nuxt",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -112,4 +117,11 @@ export default {
     GOOGLE_FORM: GOOGLE_FORM,
     API_URL: API_URL,
   },
+
+  generate: {
+    routes: [
+      '/',
+      '/articles'
+    ]
+  }
 }
