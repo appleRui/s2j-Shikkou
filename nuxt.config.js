@@ -59,8 +59,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module'
+    // https://github.com/janniks/vue-notion
+    "vue-notion/nuxt",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
