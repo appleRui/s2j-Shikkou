@@ -1,0 +1,43 @@
+#faq {
+  padding: 4rem 0;
+
+  .faq-row {
+    font-size: 20px;
+    margin-bottom: 2rem; //各Q&Aの下に余白
+
+    .twiiter-icon {
+      text-decoration: none;
+    }
+
+    &__question,
+    &__answer {
+      position: relative;
+      padding: 0.5rem 1.5rem;
+    }
+
+    &__question::before,
+    &__answer::before {
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    &__question {
+      font-weight: bold; //質問文は太字にしてみました
+      border-bottom: 1px solid #999;
+      margin-bottom: 4px;
+
+      &::before {
+        content: "Q.";
+        color: #ff1111;
+      }
+    }
+
+    &__answer {
+      &::before {
+        content: "A.";
+        color: #0eacfb;
+      }
+    }
+  }
+}

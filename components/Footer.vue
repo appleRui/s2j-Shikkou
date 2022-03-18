@@ -1,3 +1,8 @@
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+@import './Footer';
+</style>
+
 <template>
   <footer class="d-flex justify-content-center aligin-center footer">
     <b-container>
@@ -10,16 +15,4 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
 
-.footer {
-  margin-top: auto;
-  color: white;
-  background-color: $secondary;
-  &-txt {
-    text-align: center;
-    margin-top: 1rem;
-  }
-}
-</style>>

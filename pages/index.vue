@@ -38,10 +38,14 @@ export default {
       },
       page_size: 5,
     };
-    const articles = await $axios.post(url, JSON.stringify(option), {});
-    return {
-      articles: articles.data.results,
-    };
+    try{
+      const { data } = await $axios.post(url, JSON.stringify(option));
+      return {
+        articles: data.results,
+      };
+    }catch(e){
+      console.error(e)
+    }
   },
 };
 </script>

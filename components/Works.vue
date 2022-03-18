@@ -1,3 +1,9 @@
+<style lang="scss" scoped>
+#works {
+  padding: 4rem 0;
+}
+</style>
+
 <template>
   <section id="works">
     <b-container>
@@ -56,9 +62,3 @@
 <script>
 export default {};
 </script>
-
-<style lang="scss" scoped>
-#works {
-  padding: 4rem 0;
-}
-</style>

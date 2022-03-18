@@ -1,3 +1,22 @@
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
+.contact {
+  padding: 6rem 0;
+  .contact-form__input {
+    height: auto;
+    padding: 1.25rem;
+  }
+  .contact-form__textarea {
+    height: 230px;
+    padding: 1.25rem;
+  }
+  .error {
+    color: red;
+  }
+}
+</style>
+  
 <template>
   <section class="contact">
     <b-container>
@@ -140,22 +159,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
-
-.contact {
-  padding: 6rem 0;
-  .contact-form__input {
-    height: auto;
-    padding: 1.25rem;
-  }
-  .contact-form__textarea {
-    height: 230px;
-    padding: 1.25rem;
-  }
-  .error {
-    color: red;
-  }
-}
-</style>
