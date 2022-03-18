@@ -38,7 +38,7 @@ export default {
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
-      href: '/favicon.ico'
+      href: 'https://www.dendai.ac.jp/common/images/global/favicon.ico'
     }]
   },
 
