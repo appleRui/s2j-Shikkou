@@ -1,3 +1,8 @@
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+@import './Header'
+</style>
+
 <template>
   <b-navbar
     class="header"
@@ -19,9 +24,7 @@
           <b-nav-item to="/articles">お知らせ</b-nav-item>
           <b-nav-item to="/#works">活動内容</b-nav-item>
           <b-nav-item to="/#faq">よくある質問</b-nav-item>
-          <b-nav-item to="/contactform"
-            >お問い合わせ</b-nav-item
-          >
+          <b-nav-item to="/contactform">お問い合わせ</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -32,32 +35,3 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
-
-.heaader {
-  &__logo {
-    &-img {
-      height: 32px;
-    }
-  }
-}
-.nav-item {
-  .nav-item {
-    .nav-item {
-      a {
-        color: #fff !important;
-      }
-    }
-  }
-}
-@include media-breakpoint-down(sm) {
-  .heaader {
-    &__logo {
-      &-img {
-        height: 27px;
-      }
-    }
-  }
-}
-</style>

@@ -1,3 +1,9 @@
+<style lang="scss" scoped>
+.articles {
+  padding: 1.75rem 0;
+}
+</style>
+
 <template>
   <b-container>
     <div class="page-content">
@@ -71,9 +77,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.articles {
-  padding: 1.75rem 0;
-}
-</style>

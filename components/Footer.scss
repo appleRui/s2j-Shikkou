@@ -1,0 +1,10 @@
+.footer {
+  margin-top: auto;
+  color: white;
+  background-color: $secondary;
+
+  &-txt {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
