@@ -38,7 +38,7 @@ export default {
       currentPage: 1,
     };
   },
-  async asyncData({ $axios, $config }) {
+  async asyncData({ $notionClient, $config }) {
     const url = `/v1/databases/${$config.NOTION_DB}/query`;
     const current_day = new Date();
     const current_day_format =
@@ -65,7 +65,7 @@ export default {
         ],
       },
     };
-    const articles = await $axios.post(url, JSON.stringify(option), {});
+    const articles = await $notionClient.post(url, JSON.stringify(option), {});
     return {
       articles: articles.data.results,
     };
