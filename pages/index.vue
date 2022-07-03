@@ -10,7 +10,7 @@
 <script>
 export default {
   data() {},
-  async asyncData({ $axios, $config }) {
+  async asyncData({ $notionClient, $config }) {
     const url = `/v1/databases/${$config.NOTION_DB}/query`;
     const current_day = new Date();
     const current_day_format =
@@ -39,7 +39,7 @@ export default {
       page_size: 5,
     };
     try{
-      const { data } = await $axios.post(url, JSON.stringify(option));
+      const { data } = await $notionClient.post(url, JSON.stringify(option));
       return {
         articles: data.results,
       };

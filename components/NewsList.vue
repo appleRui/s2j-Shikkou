@@ -6,10 +6,10 @@
 
 <template>
   <ul id="news-lists">
-    <li class="news-list" v-for="article in sliceData" :key="article['id']">
+    <li class="news-list" v-for="article in articles" :key="article['id']">
       <nuxt-link
         class="news-list__link"
-        :to="{ name: 'article-id', params: { id: article['id'] } }"
+        :to="{ name: 'articles-id', params: { id: article['id'] } }"
       >
         <time class="news-list__times">{{
           article.properties["公開日"].date.start
