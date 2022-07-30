@@ -21,10 +21,11 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item to="/articles">お知らせ</b-nav-item>
-          <b-nav-item to="/#works">活動内容</b-nav-item>
-          <b-nav-item to="/#faq">よくある質問</b-nav-item>
-          <b-nav-item to="/contactform">お問い合わせ</b-nav-item>
+          <b-nav-item 
+            v-for="nav in navigations"
+            :key="nav.title" 
+            :to="nav.to"
+          >{{ nav.title }}</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -32,6 +33,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return {
+      navigations: [
+        {
+          title: "お知らせ",
+          to: "/articles"
+        },
+        {
+          title: "活動内容",
+          to: "/#works"
+        },
+        {
+          title: "よくある質問",
+          to: "/#faq"
+        },
+        {
+          title: "お問い合わせ",
+          to: "/contact"
+        },
+      ]
+    }
+  }
+};
 </script>
 
