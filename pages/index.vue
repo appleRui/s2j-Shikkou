@@ -10,7 +10,7 @@
 <script>
 export default {
   data() {},
-  async asyncData({ $notionClient, $config }) {
+  async asyncData({ $notionClient, $config, $content }) {
     const url = `/v1/databases/${$config.NOTION_DB}/query`;
     const current_day = new Date();
     const current_day_format =
