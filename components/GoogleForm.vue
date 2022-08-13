@@ -1,3 +1,7 @@
+<style lang="scss" scoped>
+@import "./GoogleForm.scss";
+</style>
+
 <template>
   <div class="form-contetn">
     <iframe
@@ -13,24 +17,5 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {};
-  },
-};
+export default {};
 </script>
-
-<style lang="scss" scoped>
-.form-contetn {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>
