@@ -1,3 +1,8 @@
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+@import "./News";
+</style>
+
 <template>
   <section class="news">
     <b-container class="news-container">
@@ -36,22 +41,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
-
-.news {
-  padding: 4rem 0;
-
-  &-wrapper {
-    &__btn-list {
-      text-align: right;
-      .news__next-btn{
-        &::after{
-          margin-left: 0.25rem;
-          content: ">>";
-        }
-      }
-    }
-  }
-}
-</style>

@@ -1,35 +1,11 @@
-# TDU s2j-Shikkou
+# 東京電機大学　二部執行委員会　HP
 
-This is the website and portfolio of TDU Shikkou, 
-which was developed using Nuxt and NotionAPI.
+## 環境のセットアップ
+.envを作成し、`NOTION_TOKEN`、`NOTION_DB`をセットする
 
-## Link
-[東京電機大学　二部執行委員会 HP](https://tdu-s2j-shikkou.netlify.app/)
+**.env**
 
-## Techs
- - Front
-  - Nuxt
- - API
-  - Notion API
-
-## Package version
-- `nuxt 2.15.7`
--  `@nuxtjs/axios ^5.13.6`
--  `bootstrap-vue ^2.21.2`
-
-## Installation
-
-### Setup
-
-#### Install the depedencies
-
-```bash
-npm install
 ```
-
-#### Start the project
-
-```bash
-# for dev
-npm run dev
+NOTION_TOKEN=Notionから取得したAPI-KEY
+NOTION_DB=一覧を取得するDB-ID
 ```

@@ -46,7 +46,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~/assets/scss/variables", "~/assets/scss/common"],
+  css: ["@/assets/scss/variables", "@/assets/scss/common"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: ["~/plugins/notionClient"],
@@ -73,11 +73,14 @@ export default {
     // DOC:https://content.nuxtjs.org/
     "@nuxt/content",
   ],
+
+  // DOC:https://axios.nuxtjs.org/setup
   axios: {
     proxy: true,
     prefix: "/api/",
   },
-
+  
+  // DOC:https://github.com/nuxt-community/proxy-module#readme
   proxy: {
     "/api/": {
       target: "https://api.notion.com",
@@ -87,15 +90,11 @@ export default {
     },
   },
 
+  // DOC:https://bootstrap-vue.org/docs
   bootstrapVue: {
     bootstrapCSS: false,
     bootstrapVueCSS: false,
   },
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
 
   fontawesome: {
     imports: [

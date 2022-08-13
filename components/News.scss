@@ -1,0 +1,15 @@
+.news {
+  padding: 4rem 0;
+
+  &-wrapper {
+    &__btn-list {
+      text-align: right;
+      .news__next-btn{
+        &::after{
+          margin-left: 0.25rem;
+          content: ">>";
+        }
+      }
+    }
+  }
+}

@@ -1,16 +1,17 @@
-const {
-  NOTION_TOKEN
-} = process.env;
+const { NOTION_TOKEN } = process.env;
 
-export default function ({
-  $axios
-}, inject) {
+/**
+ * NotionAPIのリクエスト情報
+ */
+const notionClientPlugin = ({ $axios }, inject) => {
   const notionClient = $axios.create({
     headers: {
-      'Authorization': NOTION_TOKEN,
-      'Content-Type': "application/json",
-      'Notion-Version': "2022-02-22"
+      Authorization: NOTION_TOKEN,
+      'Content-Type': 'application/json',
+      'Notion-Version': '2022-02-22'
     }
-  })
-  inject('notionClient', notionClient)
-}
+  });
+  inject('notionClient', notionClient);
+};
+
+export default notionClientPlugin;
