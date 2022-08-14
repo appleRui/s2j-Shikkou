@@ -39,7 +39,7 @@ export default {
       navigations: [
         {
           title: "お知らせ",
-          to: "/articles"
+          to: "/news"
         },
         {
           title: "活動内容",

@@ -17,7 +17,7 @@
             class="news__next-btn"
             squared
             variant="outline-secondary"
-            to="/articles"
+            to="/news"
             >一覧へ</b-button
           >
         </div>
