@@ -1,3 +1,8 @@
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+@import "./News";
+</style>
+
 <template>
   <section class="news">
     <b-container class="news-container">
@@ -12,7 +17,7 @@
             class="news__next-btn"
             squared
             variant="outline-secondary"
-            to="/articles"
+            to="/news"
             >一覧へ</b-button
           >
         </div>
@@ -36,22 +41,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
-
-.news {
-  padding: 4rem 0;
-
-  &-wrapper {
-    &__btn-list {
-      text-align: right;
-      .news__next-btn{
-        &::after{
-          margin-left: 0.25rem;
-          content: ">>";
-        }
-      }
-    }
-  }
-}
-</style>

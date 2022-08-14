@@ -1,7 +1,5 @@
 <style lang="scss" scoped>
-#works {
-  padding: 4rem 0;
-}
+@import "./Works.scss"
 </style>
 
 <template>

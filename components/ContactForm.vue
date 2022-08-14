@@ -16,7 +16,7 @@
   }
 }
 </style>
-  
+
 <template>
   <section class="contact">
     <b-container>
