@@ -121,4 +121,10 @@ export default {
   generate: {
     routes: ["/", "/news"],
   },
+
+  build: {
+    babel: {
+      compact: true,
+    },
+  },
 };
